@@ -1,0 +1,20 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: latextest main workflow
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: pdflatex
+        uses: ./actions/pdflatex
+      # - run: echo $GITHUB_SHA >> public/index.html
+      - name: Save To GH Pages
+        uses: maxheld83/ghpages@v0.3.0
+        env:
+          BUILD_DIR: public/
+          GH_PAT: ${{ secrets.GH_PAT }}        
+        
