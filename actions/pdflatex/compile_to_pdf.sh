@@ -8,4 +8,4 @@ pdflatex $TEXFILE
 # pdflatex $TEXFILE
 # pdflatex $TEXFILE
 
-cp main.pdf $ARTIFACTS
+cp main.pdf $ARTIFACTS_DIR
