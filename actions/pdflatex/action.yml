@@ -1,0 +1,6 @@
+# action.yml
+name: 'pdflatex'
+description: 'Compiles latex sources to pdf'
+runs:
+  using: 'docker'
+  image: 'texlive_docker'
