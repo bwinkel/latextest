@@ -9,7 +9,8 @@ RUN apt-get update && \
     texlive-fonts-recommended \
     texlive-generic-recommended \
     texlive-lang-english \
-    texlive-xetex && \
+    texlive-xetex \
+    latex2html && \
     apt-get autoclean && apt-get --purge --yes autoremove && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
